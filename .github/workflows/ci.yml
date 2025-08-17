@@ -1,8 +1,3 @@
-# Initial main workflow for basic CI checks on all Push/Pull Request events
-# Initial goals:
-# - [] Ensure CI is functional
-# - [] Run a simple markdown check using Prettier
-
 name: Main Lint
 # Trigger on push and pull request events
 on: [push, pull_request]
