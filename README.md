@@ -2,7 +2,7 @@
 
 Repo intended for learning and testing core concepts of the MoJ tech stack incrementally
 
-![Lint](https://github.com/sgsmi/moj-stack-foundations/.github/workflows/ci.yml/badge.svg)
+![Main Lint](https://github.com/sgsmi/moj-stack-foundations/.github/workflows/ci.yml/badge.svg)
 
 
 ## Roadmap (learning in public)
