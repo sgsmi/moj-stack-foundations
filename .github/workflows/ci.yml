@@ -21,7 +21,7 @@ jobs:
     steps:
       # Checkout the repository code
       - name: Checkout repo
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
       # Run a simple test to ensure CI is functional
       - name: Setup Node (for Prettier)
         uses: actions/setup-node@v4
