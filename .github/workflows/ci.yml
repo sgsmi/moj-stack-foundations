@@ -1,0 +1,33 @@
+# Initial main workflow for basic CI checks on all Push/Pull Request events
+# Initial goals:
+# - [] Ensure CI is functional
+# - [] Run a simple markdown check using Prettier
+
+name: Main Lint
+# Trigger on push and pull request events
+on: [push, pull_request]
+
+permissions:
+  # Allow read access, no write permissions
+  contents: read
+
+# Workflow (made up of one or more jobs, these can run in parallel or sequentially)
+jobs:
+  markdown:
+    name: Markdown format (Prettier)
+    # run on the latest Ubuntu environment, Kubernetes to be used in MoJ Stack
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository code
+      - name: Checkout repo
+      - uses: actions/checkout@v4
+      # Run a simple test to ensure CI is functional
+      - name: Setup Node (for Prettier)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+      # Check markdown formatting using Prettier
+      - name: Check Markdown formatting
+        run: |
+          npx --yes prettier --check '**/*.md' --ignore-path .gitignore

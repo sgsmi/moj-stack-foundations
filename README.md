@@ -11,7 +11,6 @@ Repo intended for learning and testing core concepts of the MoJ tech stack incre
 - [ ] Kubernetes: Deployment + Service manifests (concepts)
 - [ ] AWS fundamentals: IAM, S3, CloudWatch, EKS (notes)
 
-
 ## Evidence
 
 I’ll link each demo here once it’s working.
