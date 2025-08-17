@@ -29,5 +29,4 @@ jobs:
           node-version: "lts/*"
       # Check markdown formatting using Prettier
       - name: Check Markdown formatting
-        run: |
-          npx --yes prettier --check '**/*.md'
+        run: npx --yes prettier --check '**/*.md'
