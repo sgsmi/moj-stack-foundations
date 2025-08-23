@@ -33,6 +33,10 @@ See my [workflows](https://github.com/sgsmi/moj-stack-foundations/tree/main/.git
 - **Markdown:** `npx prettier --check "**/*.md"`
 - **YAML (workflows):** `yamllint -s -c .yamllint .github/workflows`
 
+### Initialised small node app with MoJ styling
+
+- Basic node app initialised with GOV.UK styling implemented, take a look at a [screenshot of the first running version here](https://github.com/sgsmi/moj-stack-foundations/resources/node_app_moj_1.png).
+
 ## Notes
 
 No secrets in the repo. `.env` files are ignored.

@@ -1,9 +1,30 @@
 <!doctype html>
-<html lang="en-GB">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MoJ demo (not an official page)</title>
-  <h1>Hello 👋</h1>
-  <p>This is a small demo app used for learning Docker/Kubernetes/Sentry.</p>
-  <p><strong>Not</strong> an official Ministry of Justice service.</p>
+<html lang="en-GB" class="govuk-template">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MoJ-styled demo (not an official page)</title>
+    <link rel="stylesheet" href="/govuk/govuk-frontend.min.css" />
+    <link rel="stylesheet" href="/moj/moj-frontend.min.css" />
+    <link rel="icon" href="data:," />
+  </head>
+  <body class="govuk-template__body">
+    <main class="govuk-main-wrapper govuk-width-container" id="main-content" role="main">
+      <div class="govuk-phase-banner" style="margin-top: 1rem">
+        <p class="govuk-phase-banner__content">
+          <strong class="govuk-tag govuk-phase-banner__content__tag">demo</strong>
+          <span class="govuk-phase-banner__text">
+            This is a learning demo using the GOV.UK and MoJ Design Systems. It is
+            <strong>not</strong> an official Ministry of Justice service.
+          </span>
+        </p>
+      </div>
+
+      <h1 class="govuk-heading-l">Hello from a MoJ-styled Node app</h1>
+      <p class="govuk-body">To be containerised, then used for practicing Kubernetes and Sentry.</p>
+      <span class="moj-badge">example</span>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
 </html>
