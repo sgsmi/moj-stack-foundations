@@ -54,5 +54,3 @@ jobs:
 
       - name: Run yamllint (workflows only)
         run: yamllint -s -c .yamllint .github/workflows
-      
-      
