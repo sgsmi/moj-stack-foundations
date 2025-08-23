@@ -19,7 +19,7 @@ I’ll link each demo here once it’s working.
 
 ### CI with GitHub Actions - linting principles (MoJ-aligned, incremental)
 
-See my [workflows](https://github.com/sgsmi/moj-stack-foundations/actions/workflows/workflows).
+See my [workflows](https://github.com/sgsmi/moj-stack-foundations/actions/workflows/).
 
 - Start small; expand only when new tech appears.
 - Run on `ubuntu-latest`; pin action versions.
