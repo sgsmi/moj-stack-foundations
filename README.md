@@ -31,7 +31,7 @@ See my [workflows](https://github.com/sgsmi/moj-stack-foundations/tree/main/.git
 #### Default lint set (current)
 
 - **Markdown:** `npx prettier --check "**/*.md"`
-- **YAML (workflows):** `yamllint -s .github/workflows`
+- **YAML (workflows):** `yamllint -s -c .yamllint .github/workflows`
 
 ## Notes
 
