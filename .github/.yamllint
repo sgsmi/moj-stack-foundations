@@ -1,0 +1,8 @@
+extends: default
+rules:
+  document-start: disable           # allow no document start marker
+  truthy: disable                   # allow 'on' key without quoting
+  line-length:
+    max: 120                        # allow slightly longer lines
+    allow-non-breakable-words: true
+    allow-non-breakable-inline-mappings: true

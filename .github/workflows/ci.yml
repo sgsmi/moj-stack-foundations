@@ -2,7 +2,7 @@
 # Initial goals:
 # - [x] Ensure CI is functional
 # - [x] Run a simple markdown check using Prettier
-
+# - [x] Run a simple YAML lint check using yamllint
 name: Main Lint
 # Trigger on push and pull request events
 on: [push, pull_request]
@@ -13,9 +13,9 @@ permissions:
 
 concurrency:
   # one run per branch/PR ref
-  group: main-lint-${{ github.ref }}   
+  group: main-lint-${{ github.ref }}
   # cancel older in-progress runs
-  cancel-in-progress: true             
+  cancel-in-progress: true
 
 # Workflow (made up of one or more jobs, these can run in parallel or sequentially)
 jobs:
