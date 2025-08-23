@@ -53,4 +53,6 @@ jobs:
         run: pip install "yamllint==1.35.1"
 
       - name: Run yamllint (workflows only)
-        run: yamllint -s .github/workflows
+        run: yamllint -s -c .yamllint .github/workflows
+      
+      
