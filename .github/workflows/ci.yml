@@ -1,7 +1,7 @@
 # Initial main workflow for basic CI checks on all Push/Pull Request events
 # Initial goals:
-# - [] Ensure CI is functional
-# - [] Run a simple markdown check using Prettier
+# - [x] Ensure CI is functional
+# - [x] Run a simple markdown check using Prettier
 
 name: Main Lint
 # Trigger on push and pull request events
@@ -10,6 +10,12 @@ on: [push, pull_request]
 permissions:
   # Allow read access, no write permissions
   contents: read
+
+concurrency:
+  # one run per branch/PR ref
+  group: main-lint-${{ github.ref }}   
+  # cancel older in-progress runs
+  cancel-in-progress: true             
 
 # Workflow (made up of one or more jobs, these can run in parallel or sequentially)
 jobs:
@@ -30,3 +36,22 @@ jobs:
       # Check markdown formatting using Prettier
       - name: Check Markdown formatting
         run: npx --yes prettier --check '**/*.md'
+
+  yaml:
+    name: YAML lint (yamllint)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+          cache: pip
+
+      - name: Install yamllint
+        run: pip install "yamllint==1.35.1"
+
+      - name: Run yamllint (workflows only)
+        run: yamllint -s .github/workflows

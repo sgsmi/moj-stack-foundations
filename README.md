@@ -17,6 +17,22 @@ Repo intended for learning and testing core concepts of the MoJ tech stack incre
 
 I’ll link each demo here once it’s working.
 
+### CI with GitHub Actions - linting principles (MoJ-aligned, incremental)
+
+See my [(https://github.com/sgsmi/moj-stack-foundations/actions/workflows/](workflows).
+
+- Start small; expand only when new tech appears.
+- Run on `ubuntu-latest`; pin action versions.
+- Always keep a fast lint job on PRs and pushes.
+- Add language checks **only if files exist** (conditional jobs).
+- Prefer check-only in CI; do auto-fixes locally.
+- Add a badge and make the lint check required on `main`.
+
+#### Default lint set (current)
+
+- **Markdown:** `npx prettier --check "**/*.md"`
+- **YAML (workflows):** `yamllint -s .github/workflows`
+
 ## Notes
 
 No secrets in the repo. `.env` files are ignored.
